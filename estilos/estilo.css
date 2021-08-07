@@ -43,6 +43,7 @@ h1, h2, h3{
     text-align: center;
     color: var(--secundario);
     font-family: var(--fuentePrincipal);
+    margin-right: ;
 }
 h1{
     font-size: 4rem;
@@ -53,12 +54,20 @@ h2{
 h3{
     font-size: 2.4rem;
 }
+ul {
+    list-style: none;
+}
 
 /* Header */
 
 .header{
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+}
+#bienvenido{
+    margin-top: -2rem;
 }
 .header__logo{
     margin: 3rem 0;
@@ -66,6 +75,85 @@ h3{
 .container{
     max-width: 120rem;
     margin: 0 auto;
+}
+.submenu {
+    position: relative;
+
+}
+.submenu #carrito{
+    display: none;
+}
+.submenu:hover #carrito{
+    display: block;
+    position: absolute;
+    right:0;
+
+    top:100%;
+    z-index: 1;
+    background-color: white;
+    padding: 20px;
+    min-height: 400px;
+    min-width: 300px;
+}
+.boton{
+    height: 4rem;
+    padding: 0.5rem;
+    font-size: 1.8rem;
+    background-color: #ffce00;
+    border-radius: 0.5rem;
+}
+.boton:hover{
+    background-color: #fff263;
+    padding: 0.7rem;
+}
+.u-full-width {
+    width: 100%;
+    box-sizing: border-box; }
+
+.submenu {
+    position: relative;
+}
+    
+.submenu #carrito{
+    display: none;
+}
+.submenu:hover #carrito{
+    display: block;
+    position: absolute;
+    right:0;
+    
+    top:100%;
+    z-index: 1;
+    background-color: white;
+    padding: 20px;
+    min-height: 400px;
+    min-width: 300px;
+}
+#img-carrito:hover{
+    width: 3.5rem;
+}
+/* tables*/
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #E1E1E1; 
+}
+th:first-child,
+td:first-child {
+  padding-left: 0; 
+}
+th:last-child,
+td:last-child {
+  padding-right: 0; 
+}
+.vaciar-carrito{
+    color: red;
+    font-size: 2rem;
+}
+.vaciar-carrito:hover{
+    font-size: 2.1rem;
+    font-weight: bold;
 }
 /* Footer */
 .footer{
@@ -163,7 +251,13 @@ h3{
 }
 
 /* Pagina del Producto */
-
+.button{
+    border-radius: 1rem;
+    width: 9rem;
+    background-color: var(--secundario);
+    color: var(--negro);
+    font-weight: bold;
+}
 .formulario{
     margin-top: 4rem;
 }
@@ -207,4 +301,24 @@ transition: 1.5s ease;
     .remera__imagen{
         width: 75%;
     }
+}
+
+/* Msj de Error Formulario*/
+.error {
+    background-color: red;
+    text-align: center;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    max-width: 400px;
+    margin: 0 auto;
+    color: white;
+    border-radius: 1rem;
+}
+.borrar-msj,
+.borrar-msj:hover {
+    float: right;
+    cursor: pointer;
+    color: red;
+    font-weight: bold;
 }

@@ -16,145 +16,156 @@
         <a href="index.html">
             <img class="header__logo" src="img/logo.png" alt="Logotipo">
         </a>
+        <h2 id="bienvenido">Bienvenido </h2>
     </header>
     <nav class="navegacion">
         <a class="navegacion__boton navegacion__boton--activo" href="index.html">Tienda</a>
         <a class="navegacion__boton" href="nosotros.html">Nosotros</a>
+        <a class="navegacion__boton" href="registro.html">Registro</a>
+        <ul>
+            <li class="submenu">
+                    <img src="img/cart.png" id="img-carrito">
+                    <div id="carrito">
+                            
+                            <table id="lista-carrito" class="u-full-width">
+                                <thead>
+                                    <tr>
+                                        <th>Imagen</th>
+                                        <th>Nombre</th>
+                                        <th>Precio</th>
+                                        <th>Cantidad</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+
+                            <a href="#" id="vaciar-carrito" class=" boton button u-full-width">Vaciar Carrito</a>
+                    </div>
+                    
+            </li>
+        </ul>
     </nav>
-    <main class="container">
+    <main id="lista-compras" class="container">
         <h1>Nuestros Productos</h1>
         <section class="grid">
             <div class="productos">
-                <a href="productos.html">
                     <img class="productos__imagenen" src="img/1.jpg" alt="imagen Remera">
                     <div class="productos__informacion">
                         <p class="productos__nombre">VueJS</p>
                         <p class="productos__precio">$75</p>
+                        <a href="#" class="boton input agregar-carrito" data-id="1">Agregar Al Carrito</a>
                     </div>
-                </a>
             </div> <!-- prodcuto-->
             <div class="productos">
-                <a href="productos.html">
                     <img class="productos__imagenen" src="img/2.jpg" alt="imagen Remera">
                     <div class="productos__informacion">
                         <p class="productos__nombre">AngularJS</p>
                         <p class="productos__precio">$75</p>
+                        <a href="#" class="boton input agregar-carrito" data-id="2">Agregar Al Carrito</a>
                     </div>
-                </a>
             </div> <!-- prodcuto-->
             <div class="productos">
-                <a href="productos.html">
                     <img class="productos__imagenen" src="img/3.jpg" alt="imagen Remera">
                     <div class="productos__informacion">
                         <p class="productos__nombre">Reactjs</p>
                         <p class="productos__precio">$75</p>
+                        <a href="#" class="boton input agregar-carrito" data-id="3">Agregar Al Carrito</a>
                     </div>
-                </a>
             </div> <!-- prodcuto-->
             <div class="productos">
-                <a href="productos.html">
                     <img class="productos__imagenen" src="img/4.jpg" alt="imagen Remera">
                     <div class="productos__informacion">
                         <p class="productos__nombre">Redux</p>
                         <p class="productos__precio">$75</p>
+                        <a href="#" class="boton input agregar-carrito" data-id="4">Agregar Al Carrito</a>
                     </div>
-                </a>
             </div> <!-- prodcuto-->
             <div class="productos">
-                <a href="productos.html">
                     <img class="productos__imagenen" src="img/5.jpg" alt="imagen Remera">
                     <div class="productos__informacion">
                         <p class="productos__nombre">NodeJS</p>
                         <p class="productos__precio">$75</p>
+                        <a href="#" class="boton input agregar-carrito" data-id="5">Agregar Al Carrito</a>
                     </div>
-                </a>
             </div> <!-- prodcuto-->
             <div class="productos">
-                <a href="productos.html">
                     <img class="productos__imagenen" src="img/6.jpg" alt="imagen Remera">
                     <div class="productos__informacion">
                         <p class="productos__nombre">SASS</p>
                         <p class="productos__precio">$75</p>
+                        <a href="#" class="boton input agregar-carrito" data-id="6">Agregar Al Carrito</a>
                     </div>
-                </a>
             </div> <!-- prodcuto-->
             <div class="productos">
-                <a href="productos.html">
                     <img class="productos__imagenen" src="img/7.jpg" alt="imagen Remera">
                     <div class="productos__informacion">
                         <p class="productos__nombre">HTML 5</p>
                         <p class="productos__precio">$75</p>
+                        <a href="#" class="boton input agregar-carrito" data-id="7">Agregar Al Carrito</a>
                     </div>
-                </a>
             </div> <!-- prodcuto-->
             <div class="productos">
-                <a href="productos.html">
                     <img class="productos__imagenen" src="img/8.jpg" alt="imagen Remera">
                     <div class="productos__informacion">
                         <p class="productos__nombre">GitHub</p>
                         <p class="productos__precio">$75</p>
+                        <a href="#" class="boton input agregar-carrito" data-id="8">Agregar Al Carrito</a>
                     </div>
-                </a>
             </div> <!-- prodcuto-->
             <div class="productos">
-                <a href="productos.html">
                     <img class="productos__imagenen" src="img/9.jpg" alt="imagen Remera">
                     <div class="productos__informacion">
                         <p class="productos__nombre">BulmaCSS</p>
                         <p class="productos__precio">$75</p>
+                        <a href="#" class="boton input agregar-carrito" data-id="9">Agregar Al Carrito</a>
                     </div>
-                </a>
             </div> <!-- prodcuto-->
             <div class="productos">
-                <a href="productos.html">
                     <img class="productos__imagenen" src="img/10.jpg" alt="imagen Remera">
                     <div class="productos__informacion">
                         <p class="productos__nombre">TypeScript</p>
                         <p class="productos__precio">$75</p>
+                        <a href="#" class="boton input agregar-carrito" data-id="10">Agregar Al Carrito</a>
                     </div>
-                </a>
             </div> <!-- prodcuto-->
             <div class="productos">
-                <a href="productos.html">
                     <img class="productos__imagenen" src="img/11.jpg" alt="imagen Remera">
                     <div class="productos__informacion">
                         <p class="productos__nombre">Drupal</p>
                         <p class="productos__precio">$75</p>
+                        <a href="#" class="boton input agregar-carrito" data-id="11">Agregar Al Carrito</a>
                     </div>
-                </a>
             </div> <!-- prodcuto-->
             <div class="productos">
-                <a href="productos.html">
                     <img class="productos__imagenen" src="img/12.jpg" alt="imagen Remera">
                     <div class="productos__informacion">
                         <p class="productos__nombre">JavaScript</p>
                         <p class="productos__precio">$75</p>
+                        <a href="#" class="boton input agregar-carrito" data-id="12">Agregar Al Carrito</a>
                     </div>
-                </a>
             </div> <!-- prodcuto-->
             <div class="productos">
-                <a href="productos.html">
                     <img class="productos__imagenen" src="img/13.jpg" alt="imagen Remera">
                     <div class="productos__informacion">
                         <p class="productos__nombre">GraphQL</p>
                         <p class="productos__precio">$75</p>
+                        <a href="#" class="boton input agregar-carrito" data-id="13">Agregar Al Carrito</a>
                     </div>
-                </a>
             </div> <!-- prodcuto-->
             <div class="productos">
-                <a href="productos.html">
                     <img class="productos__imagenen" src="img/14.jpg" alt="imagen Remera">
                     <div class="productos__informacion">
                         <p class="productos__nombre">WordPress</p>
                         <p class="productos__precio">$75</p>
+                        <a href="#" class="boton input agregar-carrito" data-id="14">Agregar Al Carrito</a>
                     </div>
-                </a>
             </div> <!-- prodcuto-->
             <div class="grafico grafico--remeras"></div>
             <div class="grafico grafico--remerasNode"></div>
         </section>
     </main>
-
+    <script src="js/jScript.js"></script>
     <footer class="footer">
         <p class="footer__texto">Front End Store - Todos los derechos Reservados 2021.</p>
     </footer>
