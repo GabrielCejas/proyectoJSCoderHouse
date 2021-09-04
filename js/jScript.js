@@ -1,9 +1,29 @@
 // Variables
-const carrito = document.querySelector('#carrito');
+const carrito = document.querySelector("#carrito");
 const contenedorCarrito = document.querySelector('#lista-carrito tbody');
 const vaciarCarritoBtn = document.querySelector('#vaciar-carrito');
 const listaCompras = document.querySelector('#lista-compras');
 let articulosCarrito = [];
+
+//-----------jQuery------------//
+//-----Cambiar a Dark Mode-----//
+$("#boton").click(function () { 
+    $('.body').css('background-color', '#424242');
+    $('.footer, .navegacion, .productos, .card').css('background-color','#1b1b1b');
+    $('#boton').html('Dark Mode Activo');
+
+});
+//----------Interaccion con las imagenes--------------//
+$('.productos').children('img').on('click', function(evento){
+    evento.preventDefault();
+    $(this).css('width', '110%');
+})
+
+//--------Interaccion con las cards en la pagina nosotros--------//
+$('.row').children('.card').on('click', function(evento){
+    evento.preventDefault();
+    $(this).css({backgroundColor: '#1b1b1b', width:'22%'});
+})
 
 cargarEventListeners();
 function cargarEventListeners(){
@@ -96,6 +116,7 @@ function carritoHTML(){
 function LimpiarHTML(){
     contenedorCarrito.innerHTML = '';
 }
+
 
 
 

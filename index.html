@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="estilos/estilo.css">
     <title>FrontEnd Store</title>
 </head>
-<body>
+<body class="body">
     <header class="header">
         <a href="index.html">
             <img class="header__logo" src="img/logo.png" alt="Logotipo">
@@ -19,9 +19,11 @@
         <h2 id="bienvenido">Bienvenido </h2>
     </header>
     <nav class="navegacion">
+        <button id="boton" class="boton botonDark">Dark Mode</button>
         <a class="navegacion__boton navegacion__boton--activo" href="index.html">Tienda</a>
         <a class="navegacion__boton" href="nosotros.html">Nosotros</a>
         <a class="navegacion__boton" href="registro.html">Registro</a>
+        <a class="navegacion__boton" href="notas.html">Notas</a>
         <ul>
             <li class="submenu">
                     <img src="img/cart.png" id="img-carrito">
@@ -165,9 +167,10 @@
             <div class="grafico grafico--remerasNode"></div>
         </section>
     </main>
-    <script src="js/jScript.js"></script>
     <footer class="footer">
         <p class="footer__texto">Front End Store - Todos los derechos Reservados 2021.</p>
     </footer>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jScript.js"></script>
 </body>
 </html>

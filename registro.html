@@ -11,36 +11,103 @@
     <link href="https://fonts.googleapis.com/css2? family=Staatliches&display=swap" rel="hoja de estilo">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="estilos/estilo.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
     <title>FrontEnd Store</title>
 </head>
-<body>
+<body class="body">
     <header class="header">
         <a href="index.html">
             <img class="header__logo" src="img/logo.png" alt="Logotipo">
         </a>
     </header>
     <nav class="navegacion">
+        <button id="boton" class="boton botonDark">Dark Mode</button>
         <a class="navegacion__boton navegacion__boton--activo" href="index.html">Tienda</a>
         <a class="navegacion__boton" href="nosotros.html">Nosotros</a>
+        <a class="navegacion__boton" href="notas.html">Notas</a>
     </nav>
     <main id="contenido" class="container">
-        <label for="tweet"><h2>Ingrese su Nombre</h2></label>
-        <form  id="formulario">
-                <label for="nombre"></label>
-                <textarea id="nombre" class="u-full-width"></textarea>
-                <input type="submit" class="button u-full-width button-primary" value="Agregar">
+        <form action="" class="formulario" id="formulario">
+                <!-- Grupo Usuario -->
+            <div class="formulario__grupo mb-6" id="grupo__usuario">
+                <label for="usuario" class="formulario__label form-label">Usuario</label>
+                <div class="formulario__grupo-input">
+                    <input type="text" class="formulario__input form-control" name="usuario" id="usuario" placeholder="Usuario">
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+                <p class="formulario__input-error">El nombre de usuario tiene que ser de 4 a 16 digitos y solo puede contener numeros, letras y guion bajo.</p>
+            </div>
+                 <!-- Grupo Nombre -->
+            <div class="formulario__grupo mb-6" id="grupo__nombre">
+                <label for="nombre" class="formulario__label form-label">Nombre</label>
+                <div class="formulario__grupo-input">
+                    <input type="text" class="formulario__input form-control" name="nombre" id="nombre" placeholder="Nombre">
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+                <p class="formulario__input-error">El nombre tiene que ser de 4 a 16 digitos y solo puede contener numeros, letras y guion bajo.</p>
+            </div>
+                <!-- Grupo Contraseña -->
+             <div class="formulario__grupo mb-6" id="grupo__password">
+                <label for="password" class="formulario__label form-label">Contraseña</label>
+                <div class="formulario__grupo-input">
+                    <input type="password" class="formulario__input form-control" name="password" id="password">
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+                <p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
+            </div>
+                <!-- Grupo Contraseña 2-->
+            <div class="formulario__grupo mb-6" id="grupo__password2">
+                <label for="password2" class="formulario__label form-label">Repetir contraseña</label>
+                <div class="formulario__grupo-input">
+                    <input type="password" class="formulario__input form-control" name="password2" id="password2">
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+                <p class="formulario__input-error">Ambas contraseña deben ser iguales.</p>
+            </div>
+                  <!-- Grupo Correo Electronico -->
+            <div class="formulario__grupo mb-6" id="grupo__correo">
+                <label for="correo" class="formulario__label form-label">Correo Electrónico</label>
+                <div class="formulario__grupo-input">
+                    <input type="email" class="formulario__input form-control" name="correo" id="correo" placeholder="correo@correo.com">
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+                <p class="formulario__input-error">El correo dolo puede contener letras, numeros, puntos, guines y guin bajo.</p>
+            </div>
+                <!-- Grupo Correo Telefono -->
+            <div class="formulario__grupo mb-6" id="grupo__telefono">
+                <label for="telefono" class="formulario__label form-label">Teléfono</label>
+                <div class="formulario__grupo-input">
+                    <input type="number" class="formulario__input form-control" name="telefono" id="telefono" placeholder="5434155555">
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+                <p class="formulario__input-error">El teléfono solo puede contener numeros y el maximo sob 14 dígitos.</p>
+            </div>
+            <div class="formulario__grupo-terminos" id="grupo__terminos">
+                <label class="formulario__label">
+                    <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+                    <p>Acepto los terminos y Condiciones</p>
+                </label>
+            </div>
+            <div class="formulario__mensaje" id="formulario__mensaje">
+                <i class="fas fa-exclamation-triangle"></i><b>Error:</b><p>Por favor rellena el formulario correctamente</p>
+            </div>
+            <div class="formulario__grupo formulario__grupo-btn-enviar">
+                <button type="submit" class="btn btn-primary btn-lg formulario__btn">Enviar</button>
+                <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+            </div>
         </form>
-          <div>
-              <h2>Mi Registro</h2>
-              <div id="lista"></div>
-          </div>
         
     </main>
 
     <footer class="footer">
         <p class="footer__texto">Front End Store - Todos los derechos Reservados 2021.</p>
     </footer>
+    <script src="js/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-    <script src="js/js.js"></script>
+    <script src="https://kit.fontawesome.com/bbe8613076.js" crossorigin="anonymous"></script>
+    <!-- <script src="js/js.js"></script> -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js\jScript.js"></script>
+    <script src="js/formularios.js"></script>
 </body>
 </html>
